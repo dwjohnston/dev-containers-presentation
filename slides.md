@@ -38,17 +38,20 @@ Turns out VS Code is both a client and a server
 
   <div class="arrow">⟷</div>
 
-  <div class="host" :class="{ highlight: $clicks >= 3 }">
-    <div class="host-label">
-      <span v-if="$clicks === 0">Your local machine</span>
-      <span v-else-if="$clicks === 1">A remote server</span>
-      <span v-else>A Docker container</span>
+  <div :class="{ machine: $clicks >= 2 }">
+    <div v-if="$clicks >= 2" class="host-label">Your local machine</div>
+    <div class="host" :class="{ highlight: $clicks >= 3 }">
+      <div class="host-label">
+        <span v-if="$clicks === 0">Your local machine</span>
+        <span v-else-if="$clicks === 1">A remote server</span>
+        <span v-else>A Docker container</span>
+      </div>
+      <div class="box server">
+        <div class="label">VS Code</div>
+        <div class="sub">Server</div>
+      </div>
+      <div class="sub mt-2">Files · terminal · extensions · tools</div>
     </div>
-    <div class="box server">
-      <div class="label">VS Code</div>
-      <div class="sub">Server</div>
-    </div>
-    <div class="sub mt-2">Files · terminal · extensions · tools</div>
   </div>
 </div>
 
@@ -87,6 +90,12 @@ Turns out VS Code is both a client and a server
   box-shadow: 0 0 0 4px rgba(232, 163, 61, 0.3);
 }
 .host-label { font-weight: 600; margin-bottom: 0.75rem; }
+.machine {
+  border: 2px solid #888;
+  border-radius: 0.75rem;
+  padding: 0.75rem 1rem 1rem;
+  text-align: center;
+}
 .callout {
   margin-top: 1.5rem;
   margin-left: 50%;
