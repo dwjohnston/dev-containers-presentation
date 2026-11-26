@@ -28,6 +28,8 @@ clicks: 3
 
 # What is a dev container?
 
+Turns out VS Code is both a client and a server
+
 <div class="diagram">
   <div class="box client">
     <div class="label">VS Code</div>
