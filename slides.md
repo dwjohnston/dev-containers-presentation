@@ -142,3 +142,15 @@ layout: center
 .problems > div:nth-child(odd) { font-weight: 600; }
 .problems > div:nth-child(even) { color: #2e8b57; }
 </style>
+
+---
+layout: center
+class: text-center
+---
+
+# Template here
+
+<div class="flex flex-col items-center gap-6 mt-8">
+  <img src="/template-qr.svg" alt="QR code for the meta-repo-template repository" class="w-64 h-64" />
+  <a href="https://github.com/dwjohnston/meta-repo-template" class="text-2xl">github.com/dwjohnston/meta-repo-template</a>
+</div>
