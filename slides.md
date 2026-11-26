@@ -224,35 +224,43 @@ For secrets, I'm really thinking a tool like **Infisical** is the way to go
 <svg viewBox="0 0 900 380" class="secrets-svg">
   <defs>
     <marker id="ah-req" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#888"/></marker>
+    <marker id="ah-mint" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#8a5cc4"/></marker>
     <marker id="ah-tok" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#2e8b57"/></marker>
   </defs>
-    <line v-click="1" class="req" x1="218" y1="118" x2="355" y2="165" marker-end="url(#ah-req)"/>
-  <line v-click="2" class="tok" x1="359" y1="151" x2="222" y2="104" marker-end="url(#ah-tok)"/>
-  <line v-click="1" class="req" x1="222" y1="276" x2="359" y2="229" marker-end="url(#ah-req)"/>
-  <line v-click="2" class="tok" x1="355" y1="215" x2="218" y2="262" marker-end="url(#ah-tok)"/>
-  <line v-click="1" class="req" x1="678" y1="104" x2="541" y2="151" marker-end="url(#ah-req)"/>
-  <line v-click="2" class="tok" x1="545" y1="165" x2="682" y2="118" marker-end="url(#ah-tok)"/>
-  <line v-click="1" class="req" x1="682" y1="262" x2="545" y2="215" marker-end="url(#ah-req)"/>
-  <line v-click="2" class="tok" x1="541" y1="229" x2="678" y2="276" marker-end="url(#ah-tok)"/>
-  <line v-click="1" class="req" x1="457" y1="314" x2="457" y2="228" marker-end="url(#ah-req)"/>
-  <line v-click="2" class="tok" x1="443" y1="228" x2="443" y2="314" marker-end="url(#ah-tok)"/>
-  <rect class="hub" x="365.0" y="160.0" width="170" height="60" rx="10"/>
-  <text class="hub-t" x="450" y="194">Infisical</text>
-  <text class="hub-s" x="450" y="212">holds an admin token</text>
-    <rect class="node" x="45.0" y="57.0" width="170" height="46" rx="8"/><text class="node-t" x="130" y="86">Host</text>
-  <rect class="node" x="45.0" y="277.0" width="170" height="46" rx="8"/><text class="node-t" x="130" y="306">Container</text>
-  <rect class="node" x="685.0" y="57.0" width="170" height="46" rx="8"/><text class="node-t" x="770" y="86">Claude cloud etc.</text>
-  <rect class="node" x="685.0" y="277.0" width="170" height="46" rx="8"/><text class="node-t" x="770" y="306">CI pipeline</text>
-  <rect class="node" x="365.0" y="322.0" width="170" height="46" rx="8"/><text class="node-t" x="450" y="351">Application</text>
+    <line v-click="1" class="req" x1="201" y1="167" x2="350" y2="200" marker-end="url(#ah-req)"/>
+  <line v-click="3" class="tok" x1="354" y1="186" x2="205" y2="153" marker-end="url(#ah-tok)"/>
+  <line v-click="1" class="req" x1="205" y1="284" x2="354" y2="247" marker-end="url(#ah-req)"/>
+  <line v-click="3" class="tok" x1="350" y1="233" x2="201" y2="271" marker-end="url(#ah-tok)"/>
+  <line v-click="1" class="req" x1="695" y1="153" x2="546" y2="186" marker-end="url(#ah-req)"/>
+  <line v-click="3" class="tok" x1="550" y1="200" x2="699" y2="167" marker-end="url(#ah-tok)"/>
+  <line v-click="1" class="req" x1="699" y1="271" x2="550" y2="233" marker-end="url(#ah-req)"/>
+  <line v-click="3" class="tok" x1="546" y1="247" x2="695" y2="284" marker-end="url(#ah-tok)"/>
+  <line v-click="1" class="req" x1="457" y1="320" x2="457" y2="253" marker-end="url(#ah-req)"/>
+  <line v-click="3" class="tok" x1="443" y1="253" x2="443" y2="320" marker-end="url(#ah-tok)"/>
+  <line v-click="2" class="mint-back" x1="354" y1="79" x2="420" y2="181" marker-end="url(#ah-mint)"/>
+  <line v-click="2" class="mint" x1="431" y1="173" x2="365" y2="71" marker-end="url(#ah-mint)"/>
+  <line v-click="2" class="mint-back" x1="535" y1="71" x2="469" y2="173" marker-end="url(#ah-mint)"/>
+  <line v-click="2" class="mint" x1="480" y1="181" x2="546" y2="79" marker-end="url(#ah-mint)"/>
+  <rect class="hub" x="360.0" y="185.0" width="180" height="60" rx="10"/>
+  <text class="hub-t" x="450" y="219">Infisical</text>
+  <text class="hub-s" x="450" y="237">holds admin tokens</text>
+    <rect class="node" x="35.0" y="118.0" width="160" height="44" rx="8"/><text class="node-t" x="115" y="146">Host</text>
+  <rect class="node" x="35.0" y="278.0" width="160" height="44" rx="8"/><text class="node-t" x="115" y="306">Container</text>
+  <rect class="node" x="705.0" y="118.0" width="160" height="44" rx="8"/><text class="node-t" x="785" y="146">Claude cloud etc.</text>
+  <rect class="node" x="705.0" y="278.0" width="160" height="44" rx="8"/><text class="node-t" x="785" y="306">CI pipeline</text>
+  <rect class="node" x="370.0" y="328.0" width="160" height="44" rx="8"/><text class="node-t" x="450" y="356">Application</text>
+  <rect class="prov" x="260.0" y="23.0" width="160" height="44" rx="8"/><text class="node-t" x="340" y="51">GitHub</text>
+  <rect class="prov" x="480.0" y="23.0" width="160" height="44" rx="8"/><text class="node-t" x="560" y="51">Postgres</text>
 </svg>
 
 <div class="legend">
   <span v-click="1"><span class="sw req-sw"></span> requests a token</span>
-  <span v-click="2"><span class="sw tok-sw"></span> gets a short-lived token</span>
+  <span v-click="2"><span class="sw mint-sw"></span> mints it with the admin token</span>
+  <span v-click="3"><span class="sw tok-sw"></span> gets a short-lived token</span>
 </div>
 
 <style>
-.secrets-svg { width: 100%; height: 330px; margin-top: 0.5rem; }
+.secrets-svg { width: 100%; height: 340px; margin-top: 0.25rem; }
 .secrets-svg .hub { fill: rgba(232, 163, 61, 0.15); stroke: #e8a33d; stroke-width: 2; }
 .secrets-svg .hub-t { font-size: 22px; font-weight: 600; text-anchor: middle; fill: currentColor; }
 .secrets-svg .hub-s { font-size: 12px; text-anchor: middle; fill: currentColor; opacity: 0.7; }
@@ -260,10 +268,13 @@ For secrets, I'm really thinking a tool like **Infisical** is the way to go
 .secrets-svg .node-t { font-size: 16px; font-weight: 600; text-anchor: middle; fill: currentColor; }
 .secrets-svg .req { stroke: #888; stroke-width: 2; stroke-dasharray: 5 4; }
 .secrets-svg .tok { stroke: #2e8b57; stroke-width: 2.5; }
+.secrets-svg .mint, .secrets-svg .mint-back { stroke: #8a5cc4; stroke-width: 2; }
+.secrets-svg .prov { fill: rgba(138, 92, 196, 0.1); stroke: #8a5cc4; stroke-width: 2; }
 .legend { display: flex; gap: 2rem; justify-content: center; font-size: 0.95rem; }
 .legend .sw { display: inline-block; width: 1.5rem; height: 0; vertical-align: middle; margin-right: 0.4rem; }
 .req-sw { border-top: 2px dashed #888; }
 .tok-sw { border-top: 3px solid #2e8b57; }
+.mint-sw { border-top: 2px solid #8a5cc4; }
 </style>
 
 ---
