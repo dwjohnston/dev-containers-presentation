@@ -208,3 +208,27 @@ For secrets, I'm really thinking a tool like **Infisical** is the way to go
 - As pace increases, I think secrets management is more important
 - Thinking in containers has value beyond just information hygiene
   - e.g. evaluating agent behaviour
+
+---
+layout: center
+class: text-center
+---
+
+# Thanks!
+
+<div class="flex items-center justify-center gap-16 mt-8">
+  <div class="flex flex-col items-center gap-3">
+    <img src="/david-johnston.jpg" alt="David Johnston" class="w-48 h-48 rounded-full object-cover" />
+    <div class="text-xl font-semibold">David Johnston</div>
+    <a href="https://www.blacksheepcode.com" class="text-xl">www.blacksheepcode.com</a>
+  </div>
+  <div class="flex flex-col items-center gap-3">
+    <img src="/linkedin-qr.svg" alt="QR code for David Johnston's LinkedIn profile" class="w-48 h-48" />
+    <div class="text-xl">LinkedIn</div>
+  </div>
+</div>
+
+<div class="text-sm opacity-70 mt-10">
+  VS Code git credential sharing issue:
+  <a href="https://github.com/microsoft/vscode-remote-release/issues/9466">github.com/microsoft/vscode-remote-release/issues/9466</a>
+</div>
