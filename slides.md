@@ -38,8 +38,8 @@ clicks: 5
 
   <div class="arrow">⟷</div>
 
-  <div :class="{ machine: $clicks >= 4 }">
-    <div v-if="$clicks >= 4" class="host-label">Your local machine</div>
+  <div class="machine" :class="{ shown: $clicks >= 4 }">
+    <div class="host-label machine-label">Your local machine</div>
     <div class="host" :class="{ highlight: $clicks >= 5 }">
       <div class="host-label">
         <span v-if="$clicks === 2">Your local machine</span>
@@ -91,11 +91,15 @@ clicks: 5
 }
 .host-label { font-weight: 600; margin-bottom: 0.75rem; }
 .machine {
-  border: 2px solid #888;
+  border: 2px solid transparent;
   border-radius: 0.75rem;
   padding: 0.75rem 1rem 1rem;
   text-align: center;
+  transition: border-color 0.3s;
 }
+.machine .machine-label { visibility: hidden; }
+.machine.shown { border-color: #888; }
+.machine.shown .machine-label { visibility: visible; }
 .callout {
   margin-top: 1.5rem;
   margin-left: 50%;
@@ -184,6 +188,12 @@ layout: center
 
 ---
 layout: center
+---
+
+<div class="text-9xl font-bold">Demo</div>
+
+---
+layout: center
 class: text-center
 ---
 
@@ -195,17 +205,15 @@ class: text-center
 </div>
 
 ---
-layout: center
----
-
-<div class="text-9xl font-bold">Demo</div>
-
----
 
 # What sucks
 
+<v-clicks>
+
 - Docker performance can be sluggish
 - Changing the environment variables is tedious
+
+</v-clicks>
 
 ---
 
