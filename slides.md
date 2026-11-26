@@ -221,6 +221,7 @@ class: text-center
     <img src="/david-johnston.jpg" alt="David Johnston" class="w-48 h-48 rounded-full object-cover" />
     <div class="text-xl font-semibold">David Johnston</div>
     <a href="https://www.blacksheepcode.com" class="text-xl">www.blacksheepcode.com</a>
+    <a href="https://bsky.app/profile/djdave.bsky.social" class="text-xl">Bluesky: @djdave.bsky.social</a>
   </div>
   <div class="flex flex-col items-center gap-3">
     <img src="/linkedin-qr.svg" alt="QR code for David Johnston's LinkedIn profile" class="w-48 h-48" />
