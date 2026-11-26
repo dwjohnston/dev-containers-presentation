@@ -288,6 +288,10 @@ class: text-center
 
 <div class="flex items-center justify-center gap-16 mt-8">
   <div class="flex flex-col items-center gap-3">
+    <img src="/bluesky-qr.svg" alt="QR code for David Johnston's Bluesky profile" class="w-48 h-48" />
+    <div class="text-xl">Bluesky</div>
+  </div>
+  <div class="flex flex-col items-center gap-3">
     <img src="/david-johnston.jpg" alt="David Johnston" class="w-48 h-48 rounded-full object-cover" />
     <div class="text-xl font-semibold">David Johnston</div>
     <a href="https://www.blacksheepcode.com" class="text-xl">www.blacksheepcode.com</a>
