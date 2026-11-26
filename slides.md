@@ -284,6 +284,8 @@ For secrets, I'm really thinking a tool like **Infisical** is the way to go
 <v-clicks depth="2">
 
 - This works
+- This doesn't completely make you safe
+  - But at least you're _opting in_ to the risk
 - As pace increases, I think secrets management is more important
 - Thinking in containers has value beyond just information hygiene
   - e.g. evaluating agent behaviour
