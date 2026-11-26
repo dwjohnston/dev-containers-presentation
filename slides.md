@@ -154,3 +154,48 @@ class: text-center
   <img src="/template-qr.svg" alt="QR code for the meta-repo-template repository" class="w-64 h-64" />
   <a href="https://github.com/dwjohnston/meta-repo-template" class="text-2xl">github.com/dwjohnston/meta-repo-template</a>
 </div>
+
+---
+layout: center
+---
+
+<div class="text-9xl font-bold">Demo</div>
+
+---
+
+# What sucks
+
+- Docker performance can be sluggish
+- Changing the environment variables is tedious
+
+---
+
+# Secrets
+
+For secrets, I'm really thinking a tool like **Infisical** is the way to go
+
+<div class="secrets">
+  <div class="hub">Infisical</div>
+  <div class="targets">
+    <div class="target"><div class="arrow">↓</div><div class="box">Host</div></div>
+    <div class="target"><div class="arrow">↓</div><div class="box">Container</div></div>
+    <div class="target"><div class="arrow">↓</div><div class="box">Claude cloud etc.</div></div>
+    <div class="target"><div class="arrow">↓</div><div class="box">CI pipeline</div></div>
+    <div class="target"><div class="arrow">↓</div><div class="box">Application</div></div>
+  </div>
+</div>
+
+<style>
+.secrets { display: flex; flex-direction: column; align-items: center; margin-top: 2.5rem; }
+.hub {
+  border: 2px solid #e8a33d; background: rgba(232, 163, 61, 0.12);
+  border-radius: 0.5rem; padding: 0.75rem 2.5rem; font-size: 1.4rem; font-weight: 600;
+}
+.targets { display: grid; grid-template-columns: repeat(5, 1fr); gap: 1rem; margin-top: 0.5rem; width: 100%; }
+.target { display: flex; flex-direction: column; align-items: center; }
+.arrow { font-size: 2rem; opacity: 0.6; }
+.box {
+  border: 2px solid #4b82c4; background: rgba(75, 130, 196, 0.1);
+  border-radius: 0.5rem; padding: 0.75rem 0.5rem; width: 100%; text-align: center; font-weight: 600;
+}
+</style>
