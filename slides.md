@@ -199,3 +199,12 @@ For secrets, I'm really thinking a tool like **Infisical** is the way to go
   border-radius: 0.5rem; padding: 0.75rem 0.5rem; width: 100%; text-align: center; font-weight: 600;
 }
 </style>
+
+---
+
+# Bottom line
+
+- This works
+- As pace increases, I think secrets management is more important
+- Thinking in containers has value beyond just information hygiene
+  - e.g. evaluating agent behaviour
