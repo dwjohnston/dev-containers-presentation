@@ -125,6 +125,9 @@ layout: center
 
   <div v-click>Extensions are not installed</div>
   <div v-click>→ Include them in <code>devcontainer.json</code></div>
+
+  <div v-click>It has access to our host git credentials</div>
+  <div v-click>→ Remove them in <code>.devcontainer</code></div>
 </div>
 
 <style>
