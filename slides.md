@@ -23,14 +23,14 @@ title: "Containing the Oopsie: Dev Containers for AI-Assisted Development"
 # You give AI an impossible task and it starts trying all different things.
 
 ---
-clicks: 3
+clicks: 5
 ---
 
 # What is a dev container?
 
-Turns out VS Code is both a client and a server
+<p v-if="$clicks >= 1">Turns out VS Code is both a client and a server</p>
 
-<div class="diagram">
+<div class="diagram" v-if="$clicks >= 2">
   <div class="box client">
     <div class="label">VS Code</div>
     <div class="sub">Client (UI)</div>
@@ -38,12 +38,12 @@ Turns out VS Code is both a client and a server
 
   <div class="arrow">⟷</div>
 
-  <div :class="{ machine: $clicks >= 2 }">
-    <div v-if="$clicks >= 2" class="host-label">Your local machine</div>
-    <div class="host" :class="{ highlight: $clicks >= 3 }">
+  <div :class="{ machine: $clicks >= 4 }">
+    <div v-if="$clicks >= 4" class="host-label">Your local machine</div>
+    <div class="host" :class="{ highlight: $clicks >= 5 }">
       <div class="host-label">
-        <span v-if="$clicks === 0">Your local machine</span>
-        <span v-else-if="$clicks === 1">A remote server</span>
+        <span v-if="$clicks === 2">Your local machine</span>
+        <span v-else-if="$clicks === 3">A remote server</span>
         <span v-else>A Docker container</span>
       </div>
       <div class="box server">
@@ -55,7 +55,7 @@ Turns out VS Code is both a client and a server
   </div>
 </div>
 
-<div v-if="$clicks >= 3" class="callout">
+<div v-if="$clicks >= 5" class="callout">
   ↑ This is what we are talking about today
 </div>
 
@@ -138,7 +138,7 @@ layout: center
   <div v-click>→ Include them in <code>devcontainer.json</code></div>
 
   <div v-click>It has access to our host git credentials</div>
-  <div v-click>→ Remove them in <code>.devcontainer</code></div>
+  <div v-click>→ Remove them in <code>devcontainer.json</code></div>
 </div>
 
 <style>
@@ -153,6 +153,34 @@ layout: center
 .problems > div:nth-child(odd) { font-weight: 600; }
 .problems > div:nth-child(even) { color: #2e8b57; }
 </style>
+
+---
+
+# Removing host git credentials
+
+`devcontainer.json`
+
+```jsonc
+"remoteEnv": {
+  "SSH_AUTH_SOCK": null,
+  "GIT_ASKPASS": null,
+  "SSH_ASKPASS": null
+},
+"customizations": {
+  "vscode": {
+    "settings": {
+      // Keep the host's Git configuration out of the container
+      "dev.containers.copyGitConfig": false,
+      // Don't install the host credential helper
+      "dev.containers.gitCredentialHelperConfigLocation": "none",
+      // Disable VS Code's askpass helper for Git prompts
+      "git.useIntegratedAskPass": false,
+      // Don't inject Git authentication into terminals
+      "git.terminalAuthentication": false
+    }
+  }
+}
+```
 
 ---
 layout: center
