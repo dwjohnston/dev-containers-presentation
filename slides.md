@@ -93,3 +93,49 @@ clicks: 3
   color: #e8a33d;
 }
 </style>
+
+---
+layout: center
+---
+
+<div class="text-9xl font-bold">Demo</div>
+
+---
+
+# Problems
+
+<div class="problems">
+  <div v-click>No tools</div>
+  <div v-click>→ Update the Dockerfile with the requisite tools</div>
+
+  <div v-click>No shell aliases</div>
+  <div v-click>→ Mount them</div>
+
+  <div v-click>Conversations are lost</div>
+  <div v-click>→ Volumes to persist them</div>
+
+  <div v-click>OAuth tokens are lost</div>
+  <div v-click>→ Volumes to persist them</div>
+
+  <div v-click>Platform incompatibilities</div>
+  <div>
+    <div v-click>→ Mount <code>node_modules</code> to a separate volume</div>
+    <div v-click class="mt-1"><span class="opacity-60">or</span> → Just abandon the host mounting</div>
+  </div>
+
+  <div v-click>Extensions are not installed</div>
+  <div v-click>→ Include them in <code>devcontainer.json</code></div>
+</div>
+
+<style>
+.problems {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  column-gap: 2.5rem;
+  row-gap: 0.6rem;
+  margin-top: 1.5rem;
+  font-size: 1.15rem;
+}
+.problems > div:nth-child(odd) { font-weight: 600; }
+.problems > div:nth-child(even) { color: #2e8b57; }
+</style>
